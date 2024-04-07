@@ -9,10 +9,10 @@ import { DOCUMENT } from '@angular/common';
 })
 export class NavbarComponent {
   private sidebarVisible = false;
-  private readonly doc = inject(DOCUMENT);
+  // private readonly document = inject(DOCUMENT);
 
   onToggleSidebar(): void {
-    const body = this.doc.getElementsByTagName('body')[0];
+    const body = document.getElementsByTagName('body')[0];
 
     if (!this.sidebarVisible) {
       body.classList.add('nav-open');

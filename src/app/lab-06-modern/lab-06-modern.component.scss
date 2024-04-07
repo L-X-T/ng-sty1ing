@@ -1,0 +1,75 @@
+//$background-color: deepskyblue;
+//$foreground-color: rgba(255, 255, 255, 0.8);
+//$gutter-width: 10px;
+//$item-size: 10 * $gutter-width;
+
+.app-flex-container {
+  //display: flex;
+  background-color: deepskyblue;
+}
+
+.app-flex-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.app-flex-container > div:nth-child(2n) {
+  /* every 2nd item is bigger :-) */
+  width: 120px;
+  height: 120px;
+  line-height: 3;
+}
+
+.app-grid-container {
+  //display: grid;
+  background-color: deepskyblue;
+  padding: 10px;
+}
+
+.app-grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+//.app-grid-item1 {
+//  grid-area: header;
+//}
+//.app-grid-item2 {
+//  grid-area: menu;
+//}
+//.app-grid-item3,
+//.app-grid-item4 {
+//  grid-area: main;
+//}
+//.app-grid-item5 {
+//  grid-area: right;
+//}
+//.app-grid-item6 {
+//  grid-area: footer;
+//}
+
+#transform div {
+  width: 15rem;
+  height: 7.5rem;
+  border: 10px solid deepskyblue;
+  background-color: lighten(deepskyblue, 42%);
+}
+
+div.transition {
+  width: 100px;
+  height: 100px;
+  margin: 100px 0 0 100px;
+  border: 10px solid deepskyblue;
+  background-color: lighten(deepskyblue, 42%);
+}
+
+div.transition:hover {
+  transform: scale(3);
+}
