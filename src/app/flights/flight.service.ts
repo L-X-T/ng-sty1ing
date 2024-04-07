@@ -8,12 +8,12 @@ import { apiUrl } from '../shared/global';
 
 @Injectable({ providedIn: 'root' })
 export class FlightService {
-  static USE_HTTPS = true;
-
-  // intentional circular dependency
-  readonly url = apiUrl + (FlightService.USE_HTTPS ? 'Flight' : 'flight');
+  static readonly USE_HTTPS = true;
 
   private readonly http = inject(HttpClient);
+
+  // intentional circular dependency
+  private readonly url = apiUrl + (FlightService.USE_HTTPS ? 'Flight' : 'flight');
 
   find(from: string, to: string): Observable<Flight[]> {
     const headers = new HttpHeaders().set('Accept', 'application/json');

@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, model, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -13,13 +13,13 @@ import { Flight } from '../../entities/flight';
 
 @Component({
   selector: 'app-flight-edit',
-  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './flight-edit.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightEditComponent implements OnChanges {
   flight$?: Observable<Flight>;
-  @Input() flight?: Flight;
+  readonly flight = model<Flight>();
 
   id?: number;
   showDetails = false;
@@ -57,7 +57,7 @@ export class FlightEditComponent implements OnChanges {
 
     this.flight$.pipe(takeUntilDestroyed()).subscribe({
       next: (flight) => {
-        this.flight = flight;
+        this.flight.set(flight);
         this.patchFormValue();
         this.message = 'Success loading!';
       },
@@ -86,7 +86,7 @@ export class FlightEditComponent implements OnChanges {
         next: (flight) => {
           // console.warn('FlightEditComponent - onSave()');
           // console.log(flight);
-          this.flight = flight;
+          this.flight.set(flight);
           this.patchFormValue();
           this.message = 'Success saving! Navigating ...';
 
@@ -131,8 +131,9 @@ export class FlightEditComponent implements OnChanges {
   }
 
   private patchFormValue(): void {
-    if (this.editForm && this.flight) {
-      this.editForm.patchValue(this.flight);
+    const flight = this.flight();
+    if (this.editForm && flight) {
+      this.editForm.patchValue(flight);
     }
   }
 }

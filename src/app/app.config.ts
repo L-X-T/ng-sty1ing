@@ -11,6 +11,7 @@ export const appConfig: ApplicationConfig = {
       appRoutes,
       // withDebugTracing(),
       // withEnabledBlockingInitialNavigation()
+      // withViewTransitions(), // the magic
     ),
   ],
 };

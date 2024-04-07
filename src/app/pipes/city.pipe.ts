@@ -2,11 +2,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'city',
-  standalone: true,
 })
 export class CityPipe implements PipeTransform {
   transform(value: string, fmt = 'short'): string {
-    let short, long;
+    let short;
+    let long;
 
     switch (value) {
       case 'Graz':

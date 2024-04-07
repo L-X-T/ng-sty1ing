@@ -2,14 +2,13 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  EventEmitter,
   inject,
-  Input,
+  input,
   isDevMode,
   OnChanges,
   OnDestroy,
   OnInit,
-  Output,
+  output,
 } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
@@ -19,19 +18,18 @@ import { BlinkService } from '../../shared/blink.service';
 
 @Component({
   selector: 'app-flight-card',
-  standalone: true,
   imports: [CityPipe, DatePipe],
   templateUrl: './flight-card.component.html',
   styleUrl: './flight-card.component.scss',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightCardComponent implements OnChanges, OnInit, OnDestroy {
   debug = !isDevMode();
 
-  @Input({ required: true }) item!: Flight;
-  @Input() selected = false;
-  @Output() selectedChange = new EventEmitter<boolean>();
-  @Output() edit = new EventEmitter<void>();
+  readonly item = input.required<Flight>();
+  readonly selected = input(false);
+  readonly selectedChange = output<boolean>();
+  readonly edit = output<void>();
 
   private readonly blinkService = inject(BlinkService);
   private readonly elementRef = inject(ElementRef);
@@ -43,24 +41,24 @@ export class FlightCardComponent implements OnChanges, OnInit, OnDestroy {
   ngOnChanges(): void {
     if (this.debug) {
       console.warn('[FlightCardComponent - ngOnChanges()]');
-      console.log(this.item);
-      console.log('selected: ' + this.selected);
+      console.log(this.item());
+      console.log('selected: ' + this.selected());
     }
   }
 
   ngOnInit(): void {
     if (this.debug) {
       console.warn('[FlightCardComponent - ngOnInit()]');
-      console.log(this.item);
-      console.log('selected: ' + this.selected);
+      console.log(this.item());
+      console.log('selected: ' + this.selected());
     }
   }
 
   ngOnDestroy(): void {
     if (this.debug) {
       console.warn('[FlightCardComponent - ngOnDestroy()]');
-      console.log(this.item);
-      console.log('selected: ' + this.selected);
+      console.log(this.item());
+      console.log('selected: ' + this.selected());
     }
   }
 

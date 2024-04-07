@@ -1,14 +1,22 @@
-# Alexander Thalhammer - Workshop Base
+# Alexander Thalhammer - Sty1ing Workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3 and has since been improved and update by [@LX_T](https://twitter.com/LX_T), currently using Angular 17.3.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3 and has since been improved and update by [@LX_T](https://twitter.com/LX_T), currently using Angular 20.3.1.
+
+## SCSS Style Guide
+
+Make sure to check out the [SCSS Style Guide](https://github.com/L-X-T/ng-sty1ing/blob/main/style-guide/style-guide.scss.md) for this project.
 
 ## Slides
 
-You'll find the workshop slides in the `slides` directory.
+You'll find the workshop slides in the [slides](https://github.com/L-X-T/ng-sty1ing/tree/main/slides) directory.
 
 ## Exercises
 
-You'll find the workshop labs in the `labs` directory.
+You'll find the workshop labs in the [labs](https://github.com/L-X-T/ng-sty1ing/tree/main/labs) directory.
+
+Take a look at the [00_getting-started.md](https://github.com/L-X-T/ng-sty1ing/blob/main/labs/00_getting-started.md) lab.
+
+Hint: open the lab in preview mode or in your browser!
 
 ## Development
 
