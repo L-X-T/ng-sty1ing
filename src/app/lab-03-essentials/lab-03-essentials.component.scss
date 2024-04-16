@@ -1,0 +1,25 @@
+div.box {
+  width: 80%;
+  height: 250px;
+  margin: 10px 10%;
+  border: 10px solid gold;
+  padding: 20px 10px;
+  background-color: azure;
+}
+
+input,
+button {
+  height: 2.5em;
+  margin-right: 1em;
+  vertical-align: bottom;
+}
+
+input {
+  padding: 3px 6px;
+}
+
+input:focus,
+button:focus,
+button:hover {
+  outline: 2px solid gold;
+}
