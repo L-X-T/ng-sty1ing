@@ -38,7 +38,11 @@
       Search
     </button>
     @if (flights.length > 0) {
-      <button class="btn btn-default" style="margin-left: 10px" type="button" (click)="onDelayFirstFlight()">
+      <button
+        class="btn btn-default"
+        style="margin-left: var(--gutter-width, 10px)"
+       type="button" (click)="onDelayFirstFlight()"
+      >
         Delay 1st Flight
       </button>
     }
@@ -51,7 +55,7 @@
     @for (flight of flights; track flight) {
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <app-flight-card [item]="flight" [(selected)]="basket[flight.id]" (edit)="onEdit(flight.id)">
-          <app-flight-status-toggle style="margin-left: 10px" [(status)]="flight.delayed" />
+          <app-flight-status-toggle style="margin-left: var(--gutter-width, 10px)" [(status)]="flight.delayed" />
         </app-flight-card>
       </div>
     } @empty {
@@ -67,7 +71,7 @@
       @for (flight of asyncFlights; track flight) {
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <app-flight-card [item]="flight" [(selected)]="basket[flight.id]" (edit)="onEdit(flight.id)">
-            <app-flight-status-toggle style="margin-left: 10px" [(status)]="flight.delayed" />
+            <app-flight-status-toggle style="margin-left: var(--gutter-width, 10px)" [(status)]="flight.delayed" />
           </app-flight-card>
         </div>
       } @empty {

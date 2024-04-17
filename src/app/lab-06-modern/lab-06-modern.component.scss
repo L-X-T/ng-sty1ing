@@ -1,7 +1,7 @@
 //$background-color: deepskyblue;
 //$foreground-color: rgba(255, 255, 255, 0.8);
-//$gutter-width: 10px;
-//$item-size: 10 * $gutter-width;
+//$gutter-width: var(--gutter-width, 10px);
+//$item-size: var(--box-width, 100px);
 
 .app-flex-container {
   display: flex;
@@ -14,20 +14,20 @@
 
 .app-flex-container > div {
   flex: 1 1 auto;
-  width: 80px;
-  height: 80px;
-  margin: 10px;
+  width: var(--box-width, 80px);
+  height: fit-content;
+  margin: var(--gutter-width, 10px);
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 2;
 }
 
 .app-flex-container > div:nth-child(2n) {
   /* every 2nd item is bigger :-) */
   flex-grow: 5;
-  width: 120px;
-  height: 120px;
+  width: calc(var(--box-width, 80px) * 1.5);
+  height: calc(var(--box-width, 80px) * 1.5);
   background-color: lightcyan;
   line-height: 3;
 }
@@ -44,10 +44,10 @@
     'header header header header header'
     'menu main main main right'
     'menu footer footer footer footer';
-  gap: 10px;
+  gap: var(--gutter-width, 10px);
   justify-items: stretch;
   align-items: stretch;
-  padding: 10px;
+  padding: var(--gutter-width, 10px);
   background-color: deepskyblue;
 
   transition: grid-template-columns 0.3s ease-in-out;
@@ -58,10 +58,10 @@
 }
 
 .app-grid-container > div {
-  padding: 20px 0;
+  padding: calc(var(--gutter-width, 10px) * 2) 0;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .app-grid-item1 {
@@ -88,12 +88,12 @@
 #transform div {
   width: 15rem;
   height: 7.5rem;
-  border: 10px solid deepskyblue;
+  border: var(--gutter-width, 10px) solid deepskyblue;
   background-color: lighten(deepskyblue, 42%);
 }
 
 .translate:hover {
-  transform: translate(10px, 10px);
+  transform: translate(var(--gutter-width, 10px), var(--gutter-width, 10px));
 }
 
 .rotate:hover {
@@ -110,12 +110,12 @@
 
 .transition {
   position: absolute;
-  bottom: 100px;
+  bottom: var(--box-width, 100px);
   left: 0;
-  width: 100px;
-  height: 100px;
-  margin: 100px 0 0 100px;
-  border: 10px solid deepskyblue;
+  width: var(--box-width, 100px);
+  height: var(--box-width, 100px);
+  margin: var(--box-width, 100px) 0 0 var(--box-width, 100px);
+  border: var(--gutter-width, 10px) solid deepskyblue;
   background-color: lighten(deepskyblue, 42%);
 
   transition: transform 1s ease-in-out;
@@ -131,30 +131,30 @@
 
 @keyframes example {
   0% {
-    bottom: 100px;
+    bottom: var(--box-width, 100px);
     left: 0;
   }
 
   25% {
-    bottom: 100px;
-    left: 200px;
+    bottom: var(--box-width, 100px);
+    left: calc(var(--box-width, 100px) * 2);
     background-color: mistyrose;
   }
 
   50% {
-    bottom: 300px;
-    left: 200px;
+    bottom: calc(var(--box-width, 100px) * 3);
+    left: calc(var(--box-width, 100px) * 2);
     background-color: aliceblue;
   }
 
   75% {
-    bottom: 300px;
+    bottom: calc(var(--box-width, 100px) * 3);
     left: 0;
     background-color: beige;
   }
 
   100% {
-    bottom: 100px;
+    bottom: var(--box-width, 100px);
     left: 0;
   }
 }
