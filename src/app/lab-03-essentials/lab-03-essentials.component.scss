@@ -1,9 +1,9 @@
 div.box {
   width: 80%;
-  height: 250px;
-  margin: 10px 10%;
-  border: 10px solid gold;
-  padding: 20px 10px;
+  height: 15rem;
+  margin: var(--gutter-width, 10px) 10%;
+  border: var(--gutter-width, 10px) solid gold;
+  padding: calc(var(--gutter-width, 10px) * 2) var(--gutter-width, 10px);
   background-color: azure;
 }
 
