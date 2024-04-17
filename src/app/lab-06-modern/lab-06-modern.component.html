@@ -22,14 +22,18 @@
 
   <p>Use this for <strong>2-dimensional</strong> layouts.</p>
 
-  <div class="app-grid-container">
+  <div class="app-grid-container" [class.expanded]="expanded()">
     <div class="app-grid-item1">Header</div>
-    <div class="app-grid-item2">Menu</div>
+    <div class="app-grid-item2">Left</div>
     <div class="app-grid-item3">Main</div>
     <div class="app-grid-item4">Main</div>
     <div class="app-grid-item5">Right</div>
     <div class="app-grid-item6">Footer</div>
   </div>
+
+  <button class="btn btn-secondary" type="button" (click)="onToggleSide()">
+    {{ expanded() ? 'Collapse' : 'Expand' }}
+  </button>
 </section>
 
 <section id="transform">
