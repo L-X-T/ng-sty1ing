@@ -4,11 +4,16 @@
 //$item-size: 10 * $gutter-width;
 
 .app-flex-container {
-  //display: flex;
+  display: flex;
+  flex-flow: row nowrap;
+  //justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   background-color: deepskyblue;
 }
 
 .app-flex-container > div {
+  flex: 1 1 auto;
   width: 80px;
   height: 80px;
   margin: 10px;
@@ -20,14 +25,20 @@
 
 .app-flex-container > div:nth-child(2n) {
   /* every 2nd item is bigger :-) */
+  flex-grow: 5;
   width: 120px;
   height: 120px;
+  background-color: lightcyan;
   line-height: 3;
 }
 
+.app-flex-container > div:nth-child(2n + 1) {
+  flex-shrink: 5;
+}
+
 .app-grid-container {
-  padding: 10px;
   //display: grid;
+  padding: 10px;
   background-color: deepskyblue;
 }
 
