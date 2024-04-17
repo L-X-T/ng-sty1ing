@@ -103,7 +103,9 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "changeDetection": "OnPush",
+      "type": "component",
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "type": "directive"
