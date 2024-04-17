@@ -1,0 +1,72 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "rules": {
+    "color-named": null,
+    "max-nesting-depth": 3,
+    "scss/at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind"] }],
+    "scss/no-global-function-names": null,
+    "selector-max-compound-selectors": 3,
+    "selector-max-id": 1,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["host"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["view-transition-new", "view-transition-old"]
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [
+      "display",
+      "flex",
+      "grid",
+      "visibility",
+      "opacity",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index",
+      "width",
+      "height",
+      "outline",
+      "margin",
+      "border",
+      "padding",
+      "background",
+      "background-color",
+      "color",
+      "text-align",
+      "vertical-align",
+      "list-style",
+      "font-family",
+      "font-size",
+      "line-height",
+      "letter-spacing",
+      "font-weight",
+      "font-style",
+      "text-decoration",
+      "white-space",
+      "text-overflow",
+      "text-shadow",
+      "box-shadow",
+      "overflow",
+      "cursor",
+      "transform",
+      "transition",
+      "animation"
+    ]
+  }
+}

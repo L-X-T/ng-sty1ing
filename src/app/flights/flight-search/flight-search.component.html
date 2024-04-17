@@ -15,8 +15,7 @@
       [minlength]="minLength"
       [ngModelOptions]="{ updateOn: 'change' }"
       [pattern]="pattern"
-      [(ngModel)]="from"
-    />
+      [(ngModel)]="from" />
   </div>
   <div class="form-group">
     <label for="fsf_to">To (*)</label>
@@ -28,16 +27,14 @@
       [maxlength]="maxLength"
       [minlength]="minLength"
       [pattern]="pattern"
-      [(ngModel)]="to"
-    />
+      [(ngModel)]="to" />
   </div>
   <div class="form-group">
     <button
       class="btn btn-default"
       type="button"
       [disabled]="!to || !from || flightSearchForm.invalid || flightSearchForm.pending"
-      (click)="onSearch()"
-    >
+      (click)="onSearch()">
       Search
     </button>
     @if (flights.length > 0) {

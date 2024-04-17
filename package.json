@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "ng:update": "ng update @angular/cli @angular/core @angular/material",
-    "reset": "rm -rf node_modules && rm -f package-lock.json && npm i"
+    "reset": "rm -rf node_modules && rm -f package-lock.json && npm i",
+    "lint:scss": "stylelint \"src/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"src/**/*.scss\" --fix"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +45,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.2.5",
+    "stylelint": "^16.25.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-scss": "^6.12.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1"
   }
