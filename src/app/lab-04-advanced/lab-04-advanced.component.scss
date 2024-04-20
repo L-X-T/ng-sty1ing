@@ -1,5 +1,53 @@
 div {
   width: 50%;
   height: 20rem;
+  margin: 1rem auto;
   background-color: azure;
+
+  /* font */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-style: oblique;
+  text-decoration: underline;
+  white-space: nowrap;
+  text-shadow: 0.5px 0.5px gold;
+}
+
+.relative {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 1;
+  background-color: floralwhite;
+}
+
+.fixed {
+  position: fixed;
+  top: 15rem;
+  left: 20rem;
+  background-color: white;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: beige;
+}
+
+.img-container {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
