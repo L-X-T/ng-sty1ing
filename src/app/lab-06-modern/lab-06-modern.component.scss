@@ -1,7 +1,7 @@
-//$background-color: deepskyblue;
-//$foreground-color: rgba(255, 255, 255, 0.8);
-//$gutter-width: var(--gutter-width, 10px);
-//$item-size: var(--box-width, 100px);
+$background-color: rgb(255, 128, 0);
+$foreground-color: rgba(255, 255, 255, 0.8);
+// $gutter-width: var(--gutter-width, 10px);
+// $item-size: var(--box-width, 100px);
 
 .app-flex-container {
   display: flex;
@@ -9,31 +9,31 @@
   //justify-content: space-between;
   align-items: center;
   gap: 10px;
-  background-color: deepskyblue;
-}
+  background-color: $background-color;
 
-.app-flex-container > div {
-  flex: 1 1 auto;
-  width: var(--box-width, 80px);
-  height: fit-content;
-  margin: var(--gutter-width, 10px);
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 2.5rem;
-  line-height: 2;
-}
+  > div {
+    flex: 1 1 auto;
+    width: var(--box-width, 80px);
+    height: fit-content;
+    margin: var(--gutter-width, 10px);
+    background-color: $foreground-color;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2;
+  }
 
-.app-flex-container > div:nth-child(2n) {
-  /* every 2nd item is bigger :-) */
-  flex-grow: 5;
-  width: calc(var(--box-width, 80px) * 1.5);
-  height: calc(var(--box-width, 80px) * 1.5);
-  background-color: lightcyan;
-  line-height: 3;
-}
+  :nth-child(2n) {
+    /* every 2nd item is bigger :-) */
+    flex-grow: 5;
+    width: calc(var(--box-width, 80px) * 1.5);
+    height: calc(var(--box-width, 80px) * 1.5);
+    background-color: lightcyan;
+    line-height: 3;
+  }
 
-.app-flex-container > div:nth-child(2n + 1) {
-  flex-shrink: 5;
+  :nth-child(2n + 1) {
+    flex-shrink: 5;
+  }
 }
 
 .app-grid-container {
@@ -55,13 +55,13 @@
   &.expanded {
     grid-template-columns: 2fr 1fr 1fr 1fr 4fr;
   }
-}
 
-.app-grid-container > div {
-  padding: calc(var(--gutter-width, 10px) * 2) 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 2rem;
+  > div {
+    padding: calc(var(--gutter-width, 10px) * 2) 0;
+    background-color: $foreground-color;
+    text-align: center;
+    font-size: 2rem;
+  }
 }
 
 .app-grid-item1 {
@@ -88,8 +88,8 @@
 #transform div {
   width: 15rem;
   height: 7.5rem;
-  border: var(--gutter-width, 10px) solid deepskyblue;
-  background-color: lighten(deepskyblue, 42%);
+  border: var(--gutter-width, 10px) solid $background-color;
+  background-color: lighten($background-color, 42%);
 }
 
 .translate:hover {
@@ -115,18 +115,18 @@
   width: var(--box-width, 100px);
   height: var(--box-width, 100px);
   margin: var(--box-width, 100px) 0 0 var(--box-width, 100px);
-  border: var(--gutter-width, 10px) solid deepskyblue;
-  background-color: lighten(deepskyblue, 42%);
+  border: var(--gutter-width, 10px) solid $background-color;
+  background-color: lighten($background-color, 42%);
 
   transition: transform 1s ease-in-out;
 
   animation-name: example;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-}
 
-.transition:hover {
-  transform: scale(2);
+  &:hover {
+    transform: scale(2);
+  }
 }
 
 @keyframes example {
