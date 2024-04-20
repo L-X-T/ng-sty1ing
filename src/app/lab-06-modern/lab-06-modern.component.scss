@@ -92,14 +92,69 @@
   background-color: lighten(deepskyblue, 42%);
 }
 
-div.transition {
+.translate:hover {
+  transform: translate(10px, 10px);
+}
+
+.rotate:hover {
+  transform: rotate(15deg);
+}
+
+.scale:hover {
+  transform: scale(1.1);
+}
+
+.skew:hover {
+  transform: skew(30deg);
+}
+
+.transition {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
   width: 100px;
   height: 100px;
   margin: 100px 0 0 100px;
   border: 10px solid deepskyblue;
   background-color: lighten(deepskyblue, 42%);
+
+  transition: transform 1s ease-in-out;
+
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
-div.transition:hover {
-  transform: scale(3);
+.transition:hover {
+  transform: scale(2);
+}
+
+@keyframes example {
+  0% {
+    bottom: 100px;
+    left: 0;
+  }
+
+  25% {
+    bottom: 100px;
+    left: 200px;
+    background-color: mistyrose;
+  }
+
+  50% {
+    bottom: 300px;
+    left: 200px;
+    background-color: aliceblue;
+  }
+
+  75% {
+    bottom: 300px;
+    left: 0;
+    background-color: beige;
+  }
+
+  100% {
+    bottom: 100px;
+    left: 0;
+  }
 }
