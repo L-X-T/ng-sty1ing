@@ -1,0 +1,25 @@
+:host {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #93c;
+  font-family: AkayaTelivigala, 'Times New Roman', serif;
+}
+
+code {
+  color: darkorange;
+}
+code:nth-child(2) {
+  color: darkgreen;
+}
+
+li {
+  list-style: none;
+  font-family: inherit;
+}
+
+li:not(:first-child) {
+  background-color: black;
+  color: white;
+}
