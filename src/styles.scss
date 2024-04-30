@@ -19,6 +19,8 @@ body {
   font-family: Roboto, 'Helvetica Neue', Verdana, Arial, sans-serif;
 }
 
+app-navbar,
+app-footer,
 .main-panel {
   background-color: var(--background-color);
   color: var(--color);
@@ -26,6 +28,10 @@ body {
   .content {
     min-height: calc(100vh - 141px);
   }
+}
+
+.main-panel {
+  width: 100%;
 }
 
 section + section {
