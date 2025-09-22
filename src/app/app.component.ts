@@ -6,7 +6,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 
 @Component({
-  standalone: true,
   imports: [RouterModule, SidebarComponent, NavbarComponent, FooterComponent],
   selector: 'app-styling-root',
   templateUrl: './app.component.html',

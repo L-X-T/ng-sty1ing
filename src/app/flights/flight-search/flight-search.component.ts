@@ -15,7 +15,6 @@ import { FlightStatusToggleComponent } from '../flight-status-toggle/flight-stat
 
 @Component({
   selector: 'app-flight-search',
-  standalone: true,
   imports: [CommonModule, FormsModule, FlightCardComponent, FlightStatusToggleComponent],
   templateUrl: './flight-search.component.html',
   styleUrl: './flight-search.component.scss',

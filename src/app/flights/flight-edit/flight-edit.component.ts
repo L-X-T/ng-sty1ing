@@ -13,7 +13,6 @@ import { Flight } from '../../entities/flight';
 
 @Component({
   selector: 'app-flight-edit',
-  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './flight-edit.component.html',
 })

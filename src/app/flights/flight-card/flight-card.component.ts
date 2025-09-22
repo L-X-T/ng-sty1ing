@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -19,11 +18,9 @@ import { BlinkService } from '../../shared/blink.service';
 
 @Component({
   selector: 'app-flight-card',
-  standalone: true,
   imports: [CityPipe, DatePipe],
   templateUrl: './flight-card.component.html',
   styleUrl: './flight-card.component.scss',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightCardComponent implements OnChanges, OnInit, OnDestroy {
   debug = !isDevMode();
