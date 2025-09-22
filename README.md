@@ -1,6 +1,6 @@
 # Alexander Thalhammer - Sty1ing Workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3 and has since been improved and update by [@LX_T](https://twitter.com/LX_T), currently using Angular 17.3.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3 and has since been improved and update by [@LX_T](https://twitter.com/LX_T), currently using Angular 20.3.1.
 
 ## Slides
 
