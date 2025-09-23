@@ -1,4 +1,4 @@
-import { Component, computed, DestroyRef, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -18,6 +18,7 @@ import { FlightStatusToggleComponent } from '../flight-status-toggle/flight-stat
   imports: [CommonModule, FormsModule, FlightCardComponent, FlightStatusToggleComponent],
   templateUrl: './flight-search.component.html',
   styleUrl: './flight-search.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FlightSearchComponent {
   from = 'Hamburg';

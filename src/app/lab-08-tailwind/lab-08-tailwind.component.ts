@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -6,5 +6,6 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   templateUrl: './lab-08-tailwind.component.html',
   styleUrl: './lab-08-tailwind.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Lab08TailwindComponent {}

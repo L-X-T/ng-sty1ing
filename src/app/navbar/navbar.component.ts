@@ -1,8 +1,8 @@
-import { Component, inject, DOCUMENT } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DOCUMENT, inject } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-navbar',
-  standalone: true,
   templateUrl: 'navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -10,7 +10,7 @@ export class NavbarComponent {
   private sidebarVisible = false;
   private readonly document = inject(DOCUMENT);
 
-  onToggleSidebar(): void {
+  protected onToggleSidebar(): void {
     const body = this.document.getElementsByTagName('body')[0];
 
     if (!this.sidebarVisible) {

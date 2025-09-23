@@ -1,15 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 
 @Component({
   selector: 'app-flight-status-toggle',
-  standalone: true,
   templateUrl: './flight-status-toggle.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightStatusToggleComponent {
-  @Input({ required: true }) status = false;
-  @Output() statusChange = new EventEmitter<boolean>();
+  // readonly status = input.required<boolean>();
+  // readonly statusChange = output<boolean>();
+  readonly status = model.required<boolean>();
 
   onToggle(): void {
-    this.statusChange.emit(!this.status);
+    this.status.set(!this.status());
   }
 }
