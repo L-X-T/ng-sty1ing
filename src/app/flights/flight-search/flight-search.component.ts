@@ -18,7 +18,7 @@ import { FlightStatusToggleComponent } from '../flight-status-toggle/flight-stat
   imports: [CommonModule, FormsModule, FlightCardComponent, FlightStatusToggleComponent],
   templateUrl: './flight-search.component.html',
   styleUrl: './flight-search.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightSearchComponent {
   from = 'Hamburg';

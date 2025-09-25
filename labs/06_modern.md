@@ -36,12 +36,12 @@ Apply following styles to the `app-flex-container` `<div>`.
    flex-direction: row-reverse;
    ```
 
-3. Also test the `flex-wrap:` property values. To test  you might need to use `row` and reszie your browser tab.
+3. Also test the `flex-wrap:` property values. To test you might need to use `row` and reszie your browser tab.
 
    ```css
    flex-wrap: wrap;
    flex-wrap: wrap-reverse;
-   flex-wrap: nowrap
+   flex-wrap: nowrap;
    ```
 
 4. Stick with your best choice and apply it via the `flex-flow:` shorthand. Which combination is suited best?
@@ -78,7 +78,7 @@ Below the flex playground you'll find another section for a grid.
 
 ### Container
 
-1. Add `display: grid;` to the `app-flex-container` `<div>`.
+1. Add `display: grid;` to the `app-grid-container` `<div>`.
 
    ```css
    display: grid;

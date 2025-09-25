@@ -8,7 +8,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  output
+  output,
 } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
