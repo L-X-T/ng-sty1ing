@@ -1,5 +1,44 @@
 <h1 class="text-5xl">Lab 08 Tailwind</h1>
 
+<section>
+  <h2>Flexible Boxes</h2>
+
+  <p>Use this for <strong>1-dimensional</strong> layouts.</p>
+
+  <div class="app-flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+
+  <br />
+
+  <div class="flex justify-around items-center gap-2.5 bg-orange">
+    @for (flexboxDiv of flexboxDivs; track flexboxDiv) {
+      <div
+        class="flex-auto m-2 text-center text-4xl"
+        [class.flex-shrink-5]="flexboxDiv % 2 === 1"
+        [class.flex-grow-5]="flexboxDiv % 2 === 0"
+        [class.w-20]="flexboxDiv % 2 === 1"
+        [class.w-30]="flexboxDiv % 2 === 0"
+        [class.h-20]="flexboxDiv % 2 === 1"
+        [class.h-30]="flexboxDiv % 2 === 0"
+        [class.bg-almost-white]="flexboxDiv % 2 === 1"
+        [class.bg-lightcyan]="flexboxDiv % 2 === 0"
+        [class.leading-very-loose]="flexboxDiv % 2 === 1"
+        [class.leading-extra-loose]="flexboxDiv % 2 === 0"
+      >
+        {{ flexboxDiv }}
+      </div>
+    }
+  </div>
+</section>
+
 <section class="hide-without-tailwind block my-4">
   <h2 class="text-4xl my-4">It work's!</h2>
 
